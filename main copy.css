@@ -1,0 +1,106 @@
+html {
+    background-color: white;
+}
+
+body {
+    display: block;
+    position: fixed;
+    margin-left: 450px;
+    margin-right: auto;
+    margin-top: 70px;
+    background: black;
+    width: 400px;
+    height: 600px;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px;
+}
+
+.imageone {
+    position: fixed;
+    z-index: 0;
+    width: 300px;
+    height: 300px;
+    left: 500px;
+    top: 100px;
+    transform: translate(-50%,-50%);
+    animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg); 
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+
+.imagetwo {
+    position: fixed;
+    z-index: 0;
+    width: 300px;
+    height: 300px;
+    left: 500px;
+    top: 360px;
+     transform: translate(-50%,-50%);
+    animation: rotation 2s infinite linear;
+    animation-direction: alternate;
+}
+
+.midimg {
+    position: fixed;
+    z-index: 1;
+    width: 105px;
+    height: 105px;
+    left: 600px;
+    top: 350px;
+    transform: translate(-50%, -50%);
+    animation: transform 1s infinite linear;
+    animation-direction: alternate;
+}
+
+@keyframes transform {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(2);
+    }
+}
+
+
+
+.left {
+    font-size: 8px;
+    position: fixed;
+    z-index: 1;
+    left: 480px;
+    top: 338px;
+    animation-name: left;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.right {
+    font-size: 8px;
+    position: fixed;
+    z-index: 1;
+    left: 710px;
+    top: 338px;
+}
+
+.a {
+    display:block;
+}
+
+.a:hover {
+   animation: a 2s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes a {
+    0% { text-indent: 0; }
+    100% { text-indent: -500px }
+}
